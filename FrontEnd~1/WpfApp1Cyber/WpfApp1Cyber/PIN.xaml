@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfApp1Cyber.PIN"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1Cyber"
+        mc:Ignorable="d"
+        Title="PIN" Height="450" Width="800">
+    <Grid>
+        <Label Content="Podaj PIN" HorizontalAlignment="Left" Margin="112,153,0,0" VerticalAlignment="Top" Height="28" Width="76"/>
+        <PasswordBox x:Name="pb_pin" HorizontalAlignment="Left" Margin="193,158,0,0" VerticalAlignment="Top" Width="141" Height="23"/>
+        <Button x:Name="PINspr" Content="Zaloguj się" HorizontalAlignment="Center" Margin="0,158,0,0" VerticalAlignment="Top" Width="80" Click="PINspr_Click"/>
+        <TextBlock x:Name="tb_wynikp" HorizontalAlignment="Left" Margin="193,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="57" Width="141"/>
+        <TextBlock x:Name="tb_liczbap" HorizontalAlignment="Left" Margin="193,288,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="141"/>
+
+    </Grid>
+</Window>
