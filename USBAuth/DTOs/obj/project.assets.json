@@ -4012,11 +4012,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Damian\\Desktop\\USBAuth\\DTOs\\DTOs.csproj",
+      "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj",
       "projectName": "DTOs",
-      "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DTOs\\DTOs.csproj",
+      "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj",
       "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DTOs\\obj\\",
+      "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

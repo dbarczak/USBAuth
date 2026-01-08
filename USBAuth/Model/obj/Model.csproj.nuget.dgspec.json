@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj": {}
+    "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj": {
+    "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\obj\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

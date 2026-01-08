@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\USBAuth\\USBAuth.csproj": {}
+    "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\USBAuth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj": {
+    "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\obj\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj"
+              "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj": {
+    "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj",
-        "projectName": "Model",
-        "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj",
+        "projectName": "DTOs",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj",
         "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\Model\\obj\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -170,14 +170,95 @@
         }
       }
     },
-    "C:\\Users\\Damian\\Desktop\\USBAuth\\USBAuth\\USBAuth.csproj": {
+    "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Damian\\Desktop\\USBAuth\\USBAuth\\USBAuth.csproj",
-        "projectName": "USBAuth",
-        "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\USBAuth\\USBAuth.csproj",
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj",
+        "projectName": "Model",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\USBAuth\\obj\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -198,8 +279,105 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj"
+              "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj"
+              },
+              "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj"
+              },
+              "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\USBAuth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\USBAuth.csproj",
+        "projectName": "USBAuth",
+        "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\USBAuth.csproj",
+        "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
+        "outputPath": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj"
+              },
+              "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\DTOs.csproj"
+              },
+              "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services.csproj": {
+                "projectPath": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services.csproj"
               }
             }
           }

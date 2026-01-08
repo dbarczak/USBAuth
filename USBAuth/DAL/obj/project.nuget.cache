@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cbwxMJU4Gcw=",
+  "dgSpecHash": "058gw0cR5Dc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Damian\\Desktop\\USBAuth\\DAL\\DAL.csproj",
+  "projectFilePath": "D:\\gitrepos\\USBAuth\\USBAuth\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Damian\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Damian\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

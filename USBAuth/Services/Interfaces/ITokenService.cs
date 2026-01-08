@@ -9,8 +9,8 @@ namespace Services.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateToken(Device device);
-        Task<Session> CreateSession(Device device, string token);
-        Task<Session> GetSessionByToken(string token);
+        string GenerateToken();
+        Task<Session> CreateSessionAsync(Device device, string token, TimeSpan ttl);
+        Task<bool> RevokeTokenAsync(string token);
     }
 }

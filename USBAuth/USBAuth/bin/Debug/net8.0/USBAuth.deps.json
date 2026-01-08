@@ -9,9 +9,11 @@
       "USBAuth/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
+          "DTOs": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.22",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.22",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.22",
+          "Services": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
         "runtime": {
@@ -960,6 +962,18 @@
           }
         }
       },
+      "DTOs/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.22",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.22"
+        },
+        "runtime": {
+          "DTOs.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Model/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.22",
@@ -967,6 +981,21 @@
         },
         "runtime": {
           "Model.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Services/1.0.0": {
+        "dependencies": {
+          "DAL": "1.0.0",
+          "DTOs": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.22",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.22",
+          "Model": "1.0.0"
+        },
+        "runtime": {
+          "Services.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1559,7 +1588,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "DTOs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

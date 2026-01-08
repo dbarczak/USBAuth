@@ -10,8 +10,8 @@ namespace Services.Interfaces
 {
     public interface IDeviceService
     {
-        Task<Device> RegisterDevice(RegisterDeviceRequest request);
-        Task<bool> BlockDevice(int id);
-        Task<bool> UnblockDevice(int id);
+        Task<bool> DeviceExistsAsync(string deviceId);
+        Task<Device> RegisterDeviceAsync(RegisterDeviceRequest request);
+        Task<Device?> GetByDeviceIdAsync(string deviceId);
     }
 }

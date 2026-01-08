@@ -1,0 +1,371 @@
+﻿<Window x:Class="USBAuthFront.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="USBAuth" Height="520" Width="820"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Window.Resources>
+        <!-- Zaokrąglony przycisk -->
+        <Style x:Key="RoundedButtonStyle" TargetType="Button">
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Width" Value="320"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="18"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#F3F3F3"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#E7E7E7"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Zaokrąglone pole tekstowe -->
+        <Style x:Key="RoundedTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Height" Value="46"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="14,6"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="18"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Zaokrąglone PasswordBox -->
+        <Style x:Key="RoundedPasswordBoxStyle" TargetType="PasswordBox">
+            <Setter Property="Height" Value="46"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="14,6"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border CornerRadius="18"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Zaokrąglony ComboBox -->
+        <Style x:Key="RoundedComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Height" Value="46"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="14,6"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <!-- Biała karta jak na szkicu -->
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="18"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="22"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="22">
+        <Border Style="{StaticResource CardStyle}">
+            <Grid>
+                <!-- START VIEW -->
+                <Grid x:Name="StartView" Visibility="Visible">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
+                        <Button Style="{StaticResource RoundedButtonStyle}"
+                                Content="Zaloguj"
+                                Margin="0,0,0,18"
+                                Click="LoginButton_Click"/>
+                        <Button Style="{StaticResource RoundedButtonStyle}"
+                                Content="Zarejestruj"
+                                Click="GoToRegister_Click"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- REGISTER VIEW -->
+                <Grid x:Name="RegisterView" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Grid.Row="0" Margin="0,0,0,18">
+                        <Button Content="← Powrót"
+                                Width="120" Height="36"
+                                BorderThickness="2"
+                                BorderBrush="Black"
+                                Background="White"
+                                Cursor="Hand"
+                                Click="BackToStart_Click"/>
+                        <TextBlock Text="Rejestracja urządzenia"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </DockPanel>
+
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="520">
+
+                        <!-- PIN watermark -->
+                        <Grid Margin="0,0,0,16">
+                            <PasswordBox x:Name="RegPinBox"
+                                         Style="{StaticResource RoundedPasswordBoxStyle}"
+                                         PasswordChanged="RegPinBox_PasswordChanged"/>
+                            <TextBlock x:Name="RegPinWatermark"
+                                       Text="PIN"
+                                       Margin="18,0,0,0"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       IsHitTestVisible="False"/>
+                        </Grid>
+
+                        <!-- Nazwa urządzenia watermark -->
+                        <Grid Margin="0,0,0,16">
+                            <TextBox x:Name="RegOwnerNameBox"
+                                     Style="{StaticResource RoundedTextBoxStyle}"
+                                     TextChanged="RegOwnerNameBox_TextChanged"/>
+                            <TextBlock x:Name="RegOwnerWatermark"
+                                       Text="Nazwa urządzenia"
+                                       Margin="18,0,0,0"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       IsHitTestVisible="False">
+                               
+                            </TextBlock>
+                        </Grid>
+
+                        <!-- Hasło rejestracji watermark -->
+                        <Grid Margin="0,0,0,30">
+                            <PasswordBox x:Name="RegSecretBox"
+                                         Style="{StaticResource RoundedPasswordBoxStyle}"
+                                         PasswordChanged="RegSecretBox_PasswordChanged"/>
+                            <TextBlock x:Name="RegSecretWatermark"
+                                       Text="Hasło do rejestracji"
+                                       Margin="18,0,0,0"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       IsHitTestVisible="False"/>
+                        </Grid>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Content="Odśwież pendrive"
+                                    Width="180" Height="44"
+                                    Margin="0,0,12,0"
+                                    BorderThickness="2"
+                                    BorderBrush="Black"
+                                    Background="White"
+                                    Cursor="Hand"
+                                    Click="RefreshUsb_Click"/>
+                            <ComboBox x:Name="RegUsbCombo"
+                                      Width="300"
+                                      Style="{StaticResource RoundedComboBoxStyle}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <Button x:Name="RegisterNowButton"
+                                Style="{StaticResource RoundedButtonStyle}"
+                                Width="200" Height="46"
+                                Content="Zarejestruj"
+                                Click="RegisterNow_Click"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- LOGIN VIEW -->
+                <Grid x:Name="LoginView" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Grid.Row="0" Margin="0,0,0,18">
+                        <Button Content="← Powrót"
+                                Width="120" Height="36"
+                                BorderThickness="2"
+                                BorderBrush="Black"
+                                Background="White"
+                                Cursor="Hand"
+                                Click="BackToStart_Click"/>
+                        <TextBlock Text="Logowanie"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </DockPanel>
+
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="520">
+                        <TextBlock Text="Wybierz pendrive:"
+                                   FontSize="16"
+                                   Margin="0,0,0,8"
+                                   HorizontalAlignment="Center"/>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,18">
+                            <Button Content="Odśwież"
+                                    Width="120" Height="44"
+                                    Margin="0,0,12,0"
+                                    BorderThickness="2"
+                                    BorderBrush="Black"
+                                    Background="White"
+                                    Cursor="Hand"
+                                    Click="RefreshUsb_Click"/>
+                            <ComboBox x:Name="LoginUsbCombo"
+                                      Width="360"
+                                      Style="{StaticResource RoundedComboBoxStyle}"/>
+                        </StackPanel>
+
+                        <!-- PIN watermark -->
+                        <Grid Margin="0,0,0,10">
+                            <PasswordBox x:Name="LoginPinBox"
+                                         Style="{StaticResource RoundedPasswordBoxStyle}"
+                                         PasswordChanged="LoginPinBox_PasswordChanged"/>
+                            <TextBlock x:Name="LoginPinWatermark"
+                                       Text="PIN"
+                                       Margin="18,0,0,0"
+                                       Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       IsHitTestVisible="False"/>
+                        </Grid>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <Button x:Name="LoginNowButton"
+                                Style="{StaticResource RoundedButtonStyle}"
+                                Width="200" Height="46"
+                                Content="Zaloguj"
+                                Click="LoginNow_Click"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- LOGGED IN VIEW -->
+                <Grid x:Name="LoggedInView" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Grid.Row="0" Margin="0,0,0,18">
+                        <Button Content="← Wyloguj"
+                                Width="120" Height="36"
+                                BorderThickness="2"
+                                BorderBrush="Black"
+                                Background="White"
+                                Cursor="Hand"
+                                Click="Logout_Click"/>
+                        <TextBlock Text="Panel"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="0,4,0,0"/>
+                    </DockPanel>
+
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="520">
+                        <TextBlock Text="Zalogowano ✅"
+                                   FontSize="28"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,0,0,14"/>
+
+                        <TextBlock Text="Token ważny do:"
+                                   FontSize="16"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="LoggedInExpiresText"
+                                   Text="-"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,6,0,18"/>
+
+                        <TextBlock Text="DeviceId:"
+                                   FontSize="16"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="LoggedInDeviceIdText"
+                                   Text="-"
+                                   FontSize="14"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,6,0,0"/>
+                        <TextBlock Text="Test zasobu chronionego:"
+                                   FontSize="16"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,18,0,6"/>
+
+                        <Button x:Name="PingButton"
+                                Style="{StaticResource RoundedButtonStyle}"
+                                Width="260" Height="46"
+                                Content="Sprawdź dostęp (ping)"
+                                Click="PingButton_Click"/>
+
+                        <TextBlock x:Name="PingResultText"
+                                   Text="-"
+                                   FontSize="14"
+                                   TextWrapping="Wrap"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,10,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <Button Style="{StaticResource RoundedButtonStyle}"
+                                Width="240" Height="46"
+                                Content="Powrót do startu"
+                                Click="BackToStart_Click"/>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+        </Border>
+
+        <!-- STATUS BAR (na dole okna) -->
+        <Border BorderBrush="Black" BorderThickness="2" CornerRadius="14"
+                Background="White" Padding="12"
+                VerticalAlignment="Bottom" Margin="0,0,0,-8">
+            <TextBlock x:Name="StatusText" Text="Status: gotowe." FontSize="14"/>
+        </Border>
+    </Grid>
+</Window>

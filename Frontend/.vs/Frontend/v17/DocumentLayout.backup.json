@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\gitrepos\\USBAuth\\Frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\usbregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\usbregistrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\protectedapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\protectedapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\usblogoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\usblogoutservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|d:\\gitrepos\\usbauth\\frontend\\usbauthfront\\usbloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E35DB8A5-7DBC-4E5D-972C-9B1EAE16D1B7}|USBAuthFront\\USBAuthFront.csproj|solutionrelative:usbauthfront\\usbloginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsbLoginService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbLoginService.cs",
+              "RelativeDocumentMoniker": "USBAuthFront\\UsbLoginService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbLoginService.cs",
+              "RelativeToolTip": "USBAuthFront\\UsbLoginService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T19:08:22.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProtectedApiService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\ProtectedApiService.cs",
+              "RelativeDocumentMoniker": "USBAuthFront\\ProtectedApiService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\ProtectedApiService.cs",
+              "RelativeToolTip": "USBAuthFront\\ProtectedApiService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:33:53.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsbLogoutService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbLogoutService.cs",
+              "RelativeDocumentMoniker": "USBAuthFront\\UsbLogoutService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbLogoutService.cs",
+              "RelativeToolTip": "USBAuthFront\\UsbLogoutService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:35:37.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "USBAuthFront\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\MainWindow.xaml.cs",
+              "RelativeToolTip": "USBAuthFront\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAoBAAAAAAAAAAAWwCIBAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:18:11.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsbRegistrationService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbRegistrationService.cs",
+              "RelativeDocumentMoniker": "USBAuthFront\\UsbRegistrationService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\UsbRegistrationService.cs",
+              "RelativeToolTip": "USBAuthFront\\UsbRegistrationService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAowHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:18:08.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "USBAuthFront\\MainWindow.xaml",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\MainWindow.xaml",
+              "RelativeToolTip": "USBAuthFront\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-06T17:34:42.209Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

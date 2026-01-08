@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\gitrepos\\USBAuth\\USBAuth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|d:\\gitrepos\\usbauth\\usbauth\\usbauth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|solutionrelative:usbauth\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/USBAuth/True/SqlTable/dbo.Devices.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/USBAuth/True/SqlTable/dbo.Sessions.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|d:\\gitrepos\\usbauth\\usbauth\\services\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|solutionrelative:services\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|d:\\gitrepos\\usbauth\\usbauth\\services\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|solutionrelative:services\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|d:\\gitrepos\\usbauth\\usbauth\\services\\services\\tokenvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|solutionrelative:services\\services\\tokenvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|d:\\gitrepos\\usbauth\\usbauth\\usbauth\\controllers\\protectedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|solutionrelative:usbauth\\controllers\\protectedcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|d:\\gitrepos\\usbauth\\usbauth\\usbauth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|solutionrelative:usbauth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EA85B4C-6FDA-4305-B574-6A24BC980845}|Model\\Model.csproj|d:\\gitrepos\\usbauth\\usbauth\\model\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EA85B4C-6FDA-4305-B574-6A24BC980845}|Model\\Model.csproj|solutionrelative:model\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|d:\\gitrepos\\usbauth\\usbauth\\services\\interfaces\\itokenvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D2F69BE-0E71-4C3C-ADF7-EAEDC860D46C}|Services\\Services.csproj|solutionrelative:services\\interfaces\\itokenvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EA85B4C-6FDA-4305-B574-6A24BC980845}|Model\\Model.csproj|d:\\gitrepos\\usbauth\\usbauth\\model\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EA85B4C-6FDA-4305-B574-6A24BC980845}|Model\\Model.csproj|solutionrelative:model\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EEEDCF3-4CB5-49BC-AFBC-ADD4312D4E73}|DTOs\\DTOs.csproj|d:\\gitrepos\\usbauth\\usbauth\\dtos\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EEEDCF3-4CB5-49BC-AFBC-ADD4312D4E73}|DTOs\\DTOs.csproj|solutionrelative:dtos\\logoutrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|d:\\gitrepos\\usbauth\\usbauth\\usbauth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C982C42E-C7C6-43B6-BDE8-F5755900B81A}|USBAuth\\USBAuth.csproj|solutionrelative:usbauth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Devices [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/USBAuth/True/SqlTable/dbo.Devices.sql",
+              "ToolTip": "dbo.Devices [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-08T19:00:28.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dbo.Sessions [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/USBAuth/True/SqlTable/dbo.Sessions.sql",
+              "ToolTip": "dbo.Sessions [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-08T19:00:00.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProtectedController.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Controllers\\ProtectedController.cs",
+              "RelativeDocumentMoniker": "USBAuth\\Controllers\\ProtectedController.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Controllers\\ProtectedController.cs",
+              "RelativeToolTip": "USBAuth\\Controllers\\ProtectedController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:30:41.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Session.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Session.cs",
+              "RelativeDocumentMoniker": "Model\\Session.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Session.cs",
+              "RelativeToolTip": "Model\\Session.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:29:33.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TokenValidator.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services\\TokenValidator.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\TokenValidator.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services\\TokenValidator.cs",
+              "RelativeToolTip": "Services\\Services\\TokenValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:29:08.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITokenValidator.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Interfaces\\ITokenValidator.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ITokenValidator.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Interfaces\\ITokenValidator.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ITokenValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:28:49.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Device.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Device.cs",
+              "RelativeDocumentMoniker": "Model\\Device.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Model\\Device.cs",
+              "RelativeToolTip": "Model\\Device.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:28:12.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "USBAuth\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "USBAuth\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAIwIYAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:33:06.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\Services\\TokenService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\Services\\TokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:32:33.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ITokenService.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\Services\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ITokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:32:15.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Program.cs",
+              "RelativeDocumentMoniker": "USBAuth\\Program.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\Program.cs",
+              "RelativeToolTip": "USBAuth\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T18:29:52.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LogoutRequest.cs",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\LogoutRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\LogoutRequest.cs",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\DTOs\\LogoutRequest.cs",
+              "RelativeToolTip": "DTOs\\LogoutRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:31:58.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\appsettings.json",
+              "RelativeDocumentMoniker": "USBAuth\\appsettings.json",
+              "ToolTip": "D:\\gitrepos\\USBAuth\\USBAuth\\USBAuth\\appsettings.json",
+              "RelativeToolTip": "USBAuth\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-07T13:21:02.654Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
