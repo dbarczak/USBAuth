@@ -22,6 +22,26 @@ namespace USBAuthFront
             };
         }
 
+        private async Task<PinCheckResponse> PinCheckAsync(string deviceId, string pin)
+        {
+            var payload = new { deviceId = deviceId, pin = pin };
+            string json = JsonSerializer.Serialize(payload);
+            using var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using var resp = await _http.PostAsync("/api/auth/pin-check", content);
+            string body = await resp.Content.ReadAsStringAsync();
+
+            var dto = JsonSerializer.Deserialize<PinCheckResponse>(body, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            }) ?? new PinCheckResponse { Success = false, Message = body };
+
+            if (!resp.IsSuccessStatusCode)
+                dto.Success = false;
+
+            return dto;
+        }
+
         public async Task<LoginResultDto> LoginAsync(string usbRootPath, string pin)
         {
             if (string.IsNullOrWhiteSpace(usbRootPath))
@@ -32,6 +52,14 @@ namespace USBAuthFront
 
             // 1) Wczytaj blob z pendrive
             var blob = LoadKeyBlob(usbRootPath);
+
+            var pinCheck = await PinCheckAsync(blob.DeviceId, pin);
+
+            if (!pinCheck.Success)
+            {
+                throw new InvalidOperationException(
+                    $"{pinCheck.Message} (Próby: {pinCheck.FailedAttempts}/{pinCheck.MaxAttempts})");
+            }
 
             // 2) Wyprowadź klucz AES z PIN + salt2
             byte[] salt2 = Convert.FromBase64String(blob.Salt2Base64);

@@ -9,5 +9,6 @@ namespace Services.Interfaces
     public interface IPinHasher
     {
         void HashPin(string pin, out byte[] salt, out byte[] hash);
+        bool VerifyPin(string pin, byte[] salt, byte[] expectedHash);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Win32;
 using System.IO;
 using System.Text;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,6 +22,8 @@ namespace USBAuthFront
         private string? _currentToken;
         private DateTime? _currentExpiresAt;
         private string? _currentDeviceId;
+        private System.Windows.Threading.DispatcherTimer? _sessionTimer;
+        private bool _sessionCheckInProgress = false;
 
         public MainWindow()
         {
@@ -204,6 +207,7 @@ namespace USBAuthFront
                 _currentToken = result.Token;
                 _currentExpiresAt = result.ExpiresAt;
                 _currentDeviceId = result.DeviceId;
+                StartSessionTimer();
                 ShowLoggedIn(result);
 
                 LoginPinBox.Clear();
@@ -218,6 +222,7 @@ namespace USBAuthFront
             }
         }
 
+        // ====== Wylogowanie ======
         private async void Logout_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -233,7 +238,7 @@ namespace USBAuthFront
                 _currentToken = null;
                 _currentDeviceId = null;
                 _currentExpiresAt = null;
-
+                StopSessionTimer();
                 ClearLoggedInFields();
                 StatusText.Text = "Status: wylogowano.";
                 ShowStart();
@@ -249,6 +254,21 @@ namespace USBAuthFront
             }
         }
 
+        private void ForceLogout(string reason)
+        {
+            StopSessionTimer();
+            MessageBox.Show(reason, "Sesja wygasła", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+            _currentToken = null;
+            _currentDeviceId = null;
+            _currentExpiresAt = null;
+            ClearLoggedInFields();
+
+            ShowStart();
+        }
+
+        // ====== Ping ======
+
         private async void PingButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -258,8 +278,15 @@ namespace USBAuthFront
 
                 var api = new ProtectedApiService("https://localhost:7153");
                 var result = await api.PingAsync(_currentToken ?? "");
+                
+                if (result.StartsWith("HTTP 401") || result.StartsWith("HTTP 403"))
+                {
+                    ForceLogout("Token jest nieprawidłowy lub wygasł. Nastąpi wylogowanie.");
+                    return;
+                }
 
-                PingResultText.Text = result;
+                using var doc = JsonDocument.Parse(result);
+                PingResultText.Text = doc.RootElement.GetProperty("message").GetString();
                 StatusText.Text = "Status: ping wykonany.";
             }
             catch (Exception ex)
@@ -272,6 +299,8 @@ namespace USBAuthFront
                 PingButton.IsEnabled = true;
             }
         }
+
+        // ====== Watermarki dla pól ======
 
         private void RegPinBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
@@ -295,5 +324,64 @@ namespace USBAuthFront
                 : Visibility.Collapsed;
         }
 
+        // ====== Zarządzanie sesją ======
+
+        private void StartSessionTimer()
+        {
+            if (_sessionTimer != null)
+                return;
+
+            _sessionTimer = new System.Windows.Threading.DispatcherTimer();
+            _sessionTimer.Interval = TimeSpan.FromMinutes(10);
+            _sessionTimer.Tick += SessionTimer_Tick;
+            _sessionTimer.Start();
+        }
+
+        private void StopSessionTimer()
+        {
+            if (_sessionTimer == null)
+                return;
+
+            _sessionTimer.Stop();
+            _sessionTimer.Tick -= SessionTimer_Tick;
+            _sessionTimer = null;
+        }
+
+        private async void SessionTimer_Tick(object? sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(_currentToken))
+            {
+                StopSessionTimer();
+                return;
+            }
+
+            if (_sessionCheckInProgress)
+                return;
+
+            _sessionCheckInProgress = true;
+
+            try
+            {
+                var api = new ProtectedApiService("https://localhost:7153");
+                var result = await api.PingAsync(_currentToken);
+
+                if (result.StartsWith("HTTP 401") || result.StartsWith("HTTP 403"))
+                {
+                    StopSessionTimer();
+                    ForceLogout("Sesja wygasła (sprawdzenie okresowe). Nastąpi wylogowanie.");
+                    return;
+                }
+
+                StatusText.Text = "Status: sesja aktywna (auto-check).";
+            }
+            catch
+            {
+                StatusText.Text = "Status: nie udało się sprawdzić sesji (auto-check).";
+            }
+            finally
+            {
+                _sessionCheckInProgress = false;
+            }
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace USBAuth.Controllers
 
             return Ok(new
             {
-                message = "OK - masz dostęp.",
+                message = "OK - jesteś zalogowany.",
                 deviceId = session.Device?.DeviceId,
                 expiresAt = session.ExpiresAt
             });

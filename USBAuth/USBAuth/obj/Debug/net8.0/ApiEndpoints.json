@@ -33,6 +33,22 @@
   },
   {
     "ContainingType": "USBAuth.Controllers.AuthController",
+    "Method": "PinCheck",
+    "RelativePath": "api/Auth/pin-check",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "DTOs.PinCheckRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "USBAuth.Controllers.AuthController",
     "Method": "RegisterDevice",
     "RelativePath": "api/Auth/register",
     "HttpMethod": "POST",

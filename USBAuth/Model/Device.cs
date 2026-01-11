@@ -10,6 +10,8 @@
         public byte[] PinSalt { get; set; }
         public string Status { get; set; } = "Active";
         public DateTime CreatedAt { get; set; }
+        public int FailedLoginCount { get; set; } = 0;
+        public DateTime? FailedLoginWindowStartUtc { get; set; }
         public ICollection<Session> Sessions { get; set; } = new List<Session>();
     }
 }

@@ -17,6 +17,7 @@ builder.Services.AddSingleton<IChallengeStore, InMemoryChallengeStore>();
 builder.Services.AddScoped<IRsaSignatureVerifier, RsaSignatureVerifier>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<ITokenValidator, TokenValidator>();
+builder.Services.AddScoped<IDeviceLockoutService, DeviceLockoutService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

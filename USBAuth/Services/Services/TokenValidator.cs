@@ -27,7 +27,15 @@ namespace Services.Services
 
             if (session == null) return null;
             if (session.IsRevoked) return null;
-            if (session.ExpiresAt <= DateTime.UtcNow) return null;
+            if (session.ExpiresAt <= DateTime.UtcNow)
+            {
+                if (!session.IsRevoked)
+                {
+                    session.IsRevoked = true;
+                    await _db.SaveChangesAsync();
+                }
+                return null;
+            }
 
             if (session.Device == null) return null;
             if (!string.Equals(session.Device.Status, "Active", StringComparison.OrdinalIgnoreCase))

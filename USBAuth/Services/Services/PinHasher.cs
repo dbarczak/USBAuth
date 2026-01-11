@@ -20,5 +20,13 @@ namespace Services.Services
             using var kdf = new Rfc2898DeriveBytes(pin, salt, Iterations, HashAlgorithmName.SHA256);
             hash = kdf.GetBytes(KeySize);
         }
+
+        public bool VerifyPin(string pin, byte[] salt, byte[] expectedHash)
+        {
+            using var kdf = new Rfc2898DeriveBytes(pin, salt, Iterations, HashAlgorithmName.SHA256);
+            byte[] computed = kdf.GetBytes(expectedHash.Length);
+
+            return CryptographicOperations.FixedTimeEquals(computed, expectedHash);
+        }
     }
 }

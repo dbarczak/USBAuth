@@ -14,16 +14,19 @@ namespace USBAuth.Controllers
         private readonly IRsaSignatureVerifier _sigVerifier;
         private readonly ITokenService _tokenService;
         private readonly IConfiguration _config;
+        private readonly IDeviceLockoutService _lockout;
+        private readonly IPinHasher _pinHasher;
 
         public AuthController(IDeviceService deviceService, IConfiguration config, IChallengeStore challengeStore,
-        IRsaSignatureVerifier sigVerifier,
-        ITokenService tokenService)
+        IRsaSignatureVerifier sigVerifier,ITokenService tokenService, IDeviceLockoutService lockout, IPinHasher pinHasher)
         {
             _deviceService = deviceService;
             _config = config;
             _challengeStore = challengeStore;
             _sigVerifier = sigVerifier;
             _tokenService = tokenService;
+            _lockout = lockout;
+            _pinHasher = pinHasher;
         }
 
         [HttpPost("register")]
@@ -129,7 +132,7 @@ namespace USBAuth.Controllers
                 return Unauthorized("Podpis nieprawidłowy.");
 
             string token = _tokenService.GenerateToken();
-            var session = await _tokenService.CreateSessionAsync(device, token, TimeSpan.FromMinutes(30));
+            var session = await _tokenService.CreateSessionAsync(device, token, TimeSpan.FromMinutes(1));
 
             return Ok(new LoginResultDto
             {
@@ -150,6 +153,62 @@ namespace USBAuth.Controllers
                 return NotFound("Sesja dla podanego tokenu nie istnieje.");
 
             return Ok(new { message = "Wylogowano (token unieważniony)." });
+        }
+
+        [HttpPost("pin-check")]
+        public async Task<IActionResult> PinCheck([FromBody] PinCheckRequest request)
+        {
+            if (request == null ||
+                string.IsNullOrWhiteSpace(request.DeviceId) ||
+                string.IsNullOrWhiteSpace(request.Pin))
+            {
+                return BadRequest("Wymagane: DeviceId, Pin.");
+            }
+
+            var device = await _deviceService.GetByDeviceIdAsync(request.DeviceId);
+            if (device == null)
+                return NotFound("Urządzenie nie istnieje.");
+
+            if (!string.Equals(device.Status, "Active", StringComparison.OrdinalIgnoreCase))
+            {
+                return StatusCode(403, new PinCheckResponse
+                {
+                    Success = false,
+                    Message = $"Urządzenie ma status '{device.Status}'.",
+                    FailedAttempts = device.FailedLoginCount,
+                    MaxAttempts = 5,
+                    Status = device.Status
+                });
+            }
+
+            bool pinOk = _pinHasher.VerifyPin(request.Pin, device.PinSalt, device.PinHash);
+
+            if (!pinOk)
+            {
+                await _lockout.RegisterFailureAsync(device);
+
+                return Unauthorized(new PinCheckResponse
+                {
+                    Success = false,
+                    Message = device.Status == "Blocked"
+                        ? "PIN nieprawidłowy. Urządzenie zostało ZABLOKOWANE."
+                        : "PIN nieprawidłowy.",
+                    FailedAttempts = device.FailedLoginCount,
+                    MaxAttempts = 5,
+                    Status = device.Status
+                });
+            }
+
+            await _lockout.ResetFailuresAsync(device);
+
+            return Ok(new PinCheckResponse
+            {
+                Success = true,
+                Message = "PIN poprawny.",
+                FailedAttempts = 0,
+                MaxAttempts = 5,
+                Status = device.Status
+            });
         }
     }
 }
