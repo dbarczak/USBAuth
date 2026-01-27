@@ -8,23 +8,23 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Damian\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Mati\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\USBAuthFront.csproj",
+      "projectUniqueName": "C:\\Users\\Mati\\source\\repos\\dbarczak\\USBAuth\\Frontend\\USBAuthFront\\USBAuthFront.csproj",
       "projectName": "USBAuthFront",
-      "projectPath": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\USBAuthFront.csproj",
-      "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
-      "outputPath": "D:\\gitrepos\\USBAuth\\Frontend\\USBAuthFront\\obj\\",
+      "projectPath": "C:\\Users\\Mati\\source\\repos\\dbarczak\\USBAuth\\Frontend\\USBAuthFront\\USBAuthFront.csproj",
+      "packagesPath": "C:\\Users\\Mati\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mati\\source\\repos\\dbarczak\\USBAuth\\Frontend\\USBAuthFront\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mati\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -75,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
